@@ -1,6 +1,10 @@
 streamlit
-pandas
 numpy
+pandas
+matplotlib
+seaborn
 scikit-learn
+tensorflow
+statsmodels
 joblib
-openpyxl
+pickle-mixin
