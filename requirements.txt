@@ -3,8 +3,10 @@ numpy
 pandas
 matplotlib
 seaborn
+plotly
 scikit-learn
 tensorflow
 statsmodels
 joblib
 pickle-mixin
+
