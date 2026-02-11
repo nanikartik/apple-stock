@@ -49,14 +49,18 @@ st.sidebar.markdown("### Select Options")
 @st.cache_data
 def load_data():
     try:
-        df = pd.read_csv('AAPL')
+        df = pd.read_csv("AAPL.csv")
         df['Date'] = pd.to_datetime(df['Date'])
         df = df.sort_values('Date')
         df.set_index('Date', inplace=True)
         return df
+    except FileNotFoundError:
+        st.error("❌ AAPL.csv not found in repository.")
+        st.stop()
     except Exception as e:
         st.error(f"Error loading data: {e}")
-        return None
+        st.stop()
+
 
 # Load the data
 df = load_data()
@@ -363,11 +367,12 @@ if df is not None:
 
 else:
     st.error("❌ Could not load data. Please ensure 'AAPL.csv' is in the same directory as this script.")
-    st.info("Expected file path: C:\\Users\\bhuva\\Downloads\\apple\\AAPL.csv")
+    #st.info("Expected file path: C:\\Users\\bhuva\\Downloads\\apple\\AAPL.csv")
 
 # Footer
 st.markdown("---")
 st.markdown("📊 **Apple Stock Price Dashboard** | Built with Streamlit | Data: Historical AAPL Stock Prices (2012-2019)")
+
 
 
 
