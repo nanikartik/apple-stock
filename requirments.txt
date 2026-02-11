@@ -7,4 +7,3 @@ scikit-learn
 tensorflow
 statsmodels
 joblib
-pickle-mixin
