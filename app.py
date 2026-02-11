@@ -49,7 +49,7 @@ st.sidebar.markdown("### Select Options")
 @st.cache_data
 def load_data():
     try:
-        df = pd.read_csv('AAPL.csv')
+        df = pd.read_csv('AAPL')
         df['Date'] = pd.to_datetime(df['Date'])
         df = df.sort_values('Date')
         df.set_index('Date', inplace=True)
@@ -368,5 +368,6 @@ else:
 # Footer
 st.markdown("---")
 st.markdown("📊 **Apple Stock Price Dashboard** | Built with Streamlit | Data: Historical AAPL Stock Prices (2012-2019)")
+
 
 
