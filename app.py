@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 import seaborn as sns
 from datetime import datetime, timedelta
 import plotly.graph_objects as go
@@ -368,3 +368,4 @@ else:
 # Footer
 st.markdown("---")
 st.markdown("📊 **Apple Stock Price Dashboard** | Built with Streamlit | Data: Historical AAPL Stock Prices (2012-2019)")
+
